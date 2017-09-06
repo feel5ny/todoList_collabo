@@ -51,5 +51,5 @@ app.delete('/api/todos/:id', jsonMiddleware, (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log('listening...')
+  console.log('열었다. 3000번 포트로 와라.')
 })
