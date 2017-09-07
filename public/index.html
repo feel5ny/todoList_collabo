@@ -4,22 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Documents</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-  <div id="wrap">
-    <h1>Todos</h1>
-    <form id="todo-form" autocomplete="off">
-      <input type="text" name="title">
-      <input type="submit" value="전송">
-    </form>
-    <div id="todos">loading...</div>
+  <!-- wrapper(전체감싸기) 시작  -->
+  <div class="wrapper">
+    <!-- header 시작  -->
+    <div class="headerLeft">
+      <h1 class="title">To Do List</h1>
+      <img src = "/dist/img/writing-hand.svg">
+      <p class="todayDate">today 2017.09.07.thu</p>
+    </div>
+    <!-- header 종료  -->
+
+    <!-- 800px grid 시작  -->
+      <div class="grid">
+        <div class="status">
+          <div class="uncomplete">
+            <p>uncomplete</p>
+            <p class="count">09</p>
+          </div>
+          <div class="complete">
+            <p>complete</p>
+            <p class="count">09</p>
+          </div>
+        </div>
+        <div id="wrap">
+          <form id="todo-form" autocomplete="off">
+            <input type="text" name="title">
+            <input type="submit" value="전송">
+          </form>
+          <div id="todos">loading...</div>
+        </div>
+      </div>
+    <!-- grid 종료  -->
+
+    <footer>
+      <img src = "/dist/img/github.svg">
+      <a href="https://github.com/feel5ny">feel5ny</a>
+      <a href="https://github.com/huusz">huusz</a>
+      <a href="https://github.com/Imtae">Imtae</a>
+      <p>COPYRIGHT © 나태승 ALL RIGHTS RESERVED</p>
+    </footer>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-  <script src="vendor/ejs.min.js"></script>
-  <script src="common.js"></script>
-  <script src="index.js"></script>
+  <!-- wrapper(전체감싸기) 종료  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+  <script src="./todo/vendor/ejs.min.js"></script>
+  <script src="./todo/common.js"></script>
+  <script src="./todo/index.js"></script>
 </body>
 </html>
