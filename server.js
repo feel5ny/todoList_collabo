@@ -26,6 +26,7 @@ app.get('/api/time', (req, res) => {
   res.send(date);
 })
 
+
 //percent
 app.get('/api/percent', (req, res) => {
   function percent() {
@@ -39,6 +40,37 @@ app.get('/api/percent', (req, res) => {
   }
   let percentResult = percent();
   res.send(percentResult);
+});
+
+
+//uncount
+app.get('/api/uncount', (req, res) => {
+  function uncount() {
+    let num = 0;
+    data.todos.forEach(item => {
+      if(item.complete == false){
+        num++;
+      }
+    });
+    return num+""
+  }
+  let uncountResult = uncount();
+  res.send(uncountResult);
+});
+
+//count
+app.get('/api/count', (req, res) => {
+  function count() {
+  let num = 0;
+  data.todos.forEach(item => {
+    if(item.complete == true){
+      num++;
+    }
+  });
+    return num+"";
+  }
+  let countResult = count();
+  res.send(countResult);
 });
 
 app.post('/api/todos', jsonMiddleware, (req, res) => {
