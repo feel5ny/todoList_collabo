@@ -1,4 +1,3 @@
-<div id="todos">
   <% todos.forEach(todo => { %>
     <div class="todo-item" data-id="<%= todo.id %>">
       <input class="todo-checkbox" type="checkbox" <%= todo.complete ? "checked" : ""%>>
@@ -10,4 +9,3 @@
       <i class="todo-remove fa fa-remove"></i>
     </div>
   <% }) %>
-</div>

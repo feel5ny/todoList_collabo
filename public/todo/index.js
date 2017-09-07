@@ -6,6 +6,16 @@
   function loadTodos() {
     console.log('start loadTodos')
     render({
+      target: '#todayDate',
+      templatePath: '/todo/templates/todayDate.ejs',
+      dataPath: '/api/time'
+    });
+    render({
+      target: '#percent',
+      templatePath: '/todo/templates/percent.ejs',
+      dataPath: '/api/percent'
+    });
+    render({
       target: '#todos',
       templatePath: '/todo/templates/todos.ejs',
       dataPath: '/api/todos'
