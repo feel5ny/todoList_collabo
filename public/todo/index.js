@@ -7,7 +7,7 @@
     console.log('start loadTodos')
     render({
       target: '#todos',
-      templatePath: '/templates/todos.ejs',
+      templatePath: '/todo/templates/todos.ejs',
       dataPath: '/api/todos'
     }).then(todosEl => {
       todosEl.querySelectorAll('.todo-item').forEach(todoItem => {

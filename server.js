@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
-const data = require('./data')
+const data = require('./src/data')
 
 const app = express()
 const jsonMiddleware = bodyParser.json()
@@ -51,5 +51,5 @@ app.delete('/api/todos/:id', jsonMiddleware, (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log('열었다. 3000번 포트로 와라.')
+  console.log('3000번 포트로 와라.')
 })
