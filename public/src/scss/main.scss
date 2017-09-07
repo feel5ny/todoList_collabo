@@ -1,14 +1,140 @@
+@import "variables";
+@font-face{
+  font-family: 'Montserrat';
+  src : url('/font/Montserrat-SemiBold.ttf'),url('/font/Montserrat-Bold.ttf')
+}
+
 html, body {
   margin: 0;
   padding: 0;
+}
+h1 {
+  margin : 0px;
+}
+
+
+.wrapper{
+  height: 100%;
+  // width: 100%;
+  border: 10px solid map-get($brand-color,main1);
+  position: relative;
+}
+
+.headerLeft {
+  display: block;
+  position: absolute;
+  margin : 35px 0px 0px 35px;
+  width: 100%;
+  .title {
+    font: {
+      family :'Montserrat';
+      size: 70px;
+    }
+    color : map-get($brand-color,main1);
+    display: inline-block;
+    text: {
+      transform: uppercase;
+    }
+    margin: 0px;
+  }
+  img {
+    display: inline-block;
+  }
+  .todayDate{
+    font: {
+      family: $family;
+      size : 20px;
+      weight: bold;
+    }
+    text: {
+      transform: uppercase;
+    }
+    color : map-get($brand-color,main2);
+    margin :0px;
+  }
+}
+
+.grid{
+  width: 800px;
+  margin : 0 auto;
+}
+
+.status{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 36px;
+  font: {
+    family: $family;
+    weight: 600;
+  }
+  color : map-get($brand-color,main1);
+  p {
+    margin: 0px;
+  }
+  .uncomplete{
+    margin-right: 10px;
+    display: inline-block;
+    position:relative;
+    float: right;
+    p{
+      text-align: right;
+    }
+  }
+  .count{
+    font:{
+      size: 50px;
+    }
+  }
+  .complete{
+    margin-right: 10px;
+    display: inline-block;
+    float : right;
+    color: map-get($brand-color,main2);
+    p{
+      text-align: right;
+    }
+  }
+}
+
+footer {
+  img {
+    position: absolute;
+    right: 80px;
+  }
+  font: {
+    family : $family;
+    size: $font-size-medium;
+    weight: bold;
+  }
+  display: flex;
+  flex-direction: column;
+  a{
+    text-decoration: none;
+    color: map-get($brand-color,main1);
+    display: inline-block;
+    &:hover{
+      color: black;
+    }
+  }
+  p{
+    font:{
+      family: $family;
+      size: $font-size-small;
+    }
+    margin: 10px 0px 0px 0px;
+  }
+  color : map-get($brand-color,main1);
+  text-align: right;
+  margin: 0px 35px 35px 0px;
+  position: relative;
+  bottom: 10px;
 }
 
 #wrap {
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 20px;
-  margin: 20px auto;
-  width: 400px;
+  margin:0px;
+  // width: 400px;
   background-color: #f5f5f5;
 }
 
