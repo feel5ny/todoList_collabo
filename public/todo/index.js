@@ -41,7 +41,7 @@
             complete: e.currentTarget.checked
           }).then(res => {
             loadTodos();
-            changeProg();
+            // changeProg();
           })
         })
 
@@ -51,7 +51,7 @@
         removeLink.addEventListener('click', e => {
           axios.delete(`/api/todos/${id}`).then(res => {
             loadTodos();
-            changeProg();
+            // changeProg();
           })
         })
       })
@@ -65,7 +65,9 @@
       title: form.elements.task.value
     })
       .then(loadTodos)
+
       .then(() => {
+
         form.elements.task.value = null
       })
   })
