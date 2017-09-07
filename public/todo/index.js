@@ -6,6 +6,16 @@
   function loadTodos() {
     console.log('start loadTodos')
     render({
+      target: '#uncount',
+      templatePath: '/todo/templates/uncount.ejs',
+      dataPath: '/api/uncount'
+    });
+    render({
+      target: '#count',
+      templatePath: '/todo/templates/count.ejs',
+      dataPath: '/api/count'
+    });
+    render({
       target: '#todayDate',
       templatePath: '/todo/templates/todayDate.ejs',
       dataPath: '/api/time'
@@ -50,11 +60,11 @@
     e.preventDefault()
     const form = e.currentTarget
     axios.post('/api/todos', {
-      title: form.elements.title.value
+      title: form.elements.task.value
     })
       .then(loadTodos)
       .then(() => {
-        form.elements.title.value = null
+        form.elements.task.value = null
       })
   })
 
