@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Documents</title>
+  <title>TodoList</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="dist/css/main.css">
   <link rel="stylesheet" href="dist/css/semantic.css">
@@ -17,12 +17,12 @@
       <h1 class="title">To Do List</h1>
       <img src = "/dist/img/writing-hand.svg">
       <div class="status">
-        <div class="uncomplete">
-          <p>uncomplete</p>
-          <p class="count">09</p>
-        </div>
         <div class="complete">
           <p>complete</p>
+          <p class="count">09</p>
+        </div>
+        <div class="uncomplete">
+          <p>uncomplete</p>
           <p class="count">09</p>
         </div>
       </div>
@@ -31,6 +31,7 @@
     <!-- header 종료  -->
 
     <!-- 800px grid 시작  -->
+    <div class="width">
       <div class="grid">
         <div class="progress">
           <p>87%</p>
@@ -42,24 +43,71 @@
           <p class="percent"></p>
         </div>
         <div id="wrap">
-          <form id="todo-form" autocomplete="off">
-            <input type="text" name="title" placeholder="할일을 적으세요">
-            <input type="text" name="deadline" placeholder="마감기한을 적으세요">
-            <input type="submit" value="전송">
+          <div id="todos">로딩중이닷!</div>
+          <form id="todo-form" class="ui form" autocomplete="off">
+            <div class="formBox">
+              <input type="text" name="task" placeholder="할일을 적으세요" class="task">
+              <!-- <input type="text" name="deadline" placeholder="년" class="deadline"> -->
+              <div class="fields">
+                <div class="three field">
+                  <input type="text" name="card[expire-year]" maxlength="4" placeholder="연도" class="yearForm">
+                </div>
+                <div class="five wide field">
+                  <select class="ui three search dropdown" name="card[expire-month]">
+                    <option value="">월</option>
+                    <option value="1">1월</option>
+                    <option value="2">2월</option>
+                    <option value="3">3월</option>
+                    <option value="4">4월</option>
+                    <option value="5">5월</option>
+                    <option value="6">6월</option>
+                    <option value="7">7월</option>
+                    <option value="8">8월</option>
+                    <option value="9">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                  </select>
+                </div>
+                <div class="five wide field">
+                  <select class="ui field search dropdown" name="card[expire-month]">
+                    <option value="">일</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+              </div>
+            <div class="btn">
+              <input type="submit" value="cancel" class="cancelBtn">
+              <input type="submit" value="Add task" class="submitBtn">
+            </div>
           </form>
-          <div id="todos">loading...</div>
+
+
         </div>
       </div>
+
+    </div>
     <!-- grid 종료  -->
 
-    <footer>
-      <img src = "/dist/img/github.svg">
-      <a href="https://github.com/feel5ny">feel5ny</a>
-      <a href="https://github.com/huusz">huusz</a>
-      <a href="https://github.com/Imtae">Imtae</a>
-      <p>COPYRIGHT © 나태승 ALL RIGHTS RESERVED</p>
-    </footer>
   </div>
+  <footer>
+    <img src = "/dist/img/github.svg">
+    <a href="https://github.com/feel5ny">feel5ny</a>
+    <a href="https://github.com/huusz">huusz</a>
+    <a href="https://github.com/Imtae">Imtae</a>
+    <p>COPYRIGHT © 나태승 ALL RIGHTS RESERVED</p>
+  </footer>
   <!-- wrapper(전체감싸기) 종료  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
   <script src="./todo/vendor/ejs.min.js"></script>
