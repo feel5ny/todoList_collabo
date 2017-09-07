@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
-const data = require('./data')
+const data = require('./src/data')
 
 const app = express()
 const jsonMiddleware = bodyParser.json()
