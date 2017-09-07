@@ -40,7 +40,7 @@ h1 {
   display: inline-block;
 }
 
-.headerLeft .todayDate {
+.headerLeft #todayDate {
   font-family: "Montserrat";
   font-size: 20px;
   font-weight: bold;
@@ -110,6 +110,13 @@ h1 {
   margin-bottom: 0px;
 }
 
+.todo-item {
+  padding: 10px;
+  border: 2px solid #E0E1E2;
+  border-radius: 4px;
+  margin: 0px 10px 10px 10px;
+}
+
 .formBox {
   margin-top: 10px;
 }
@@ -129,6 +136,7 @@ h1 {
 
 #todo-form .task {
   outline-style: none;
+  background-image: url("/public/dist/img/github.svg");
   border: none;
   width: 100%;
   background: none;
@@ -165,6 +173,13 @@ h1 {
   margin-right: 15px;
   border: none;
   background-color: transparent;
+}
+
+.todo-remove {
+  display: inline-block;
+  cursor: pointer;
+  right: 0;
+  position: absolute;
 }
 
 footer {

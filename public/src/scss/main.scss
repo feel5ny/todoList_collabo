@@ -45,7 +45,7 @@ h1 {
   img {
     display: inline-block;
   }
-  .todayDate{
+  #todayDate{
     font: {
       family: $family;
       size : 20px;
@@ -123,6 +123,13 @@ h1 {
 
 }
 
+.todo-item{
+  padding: 10px;
+  border: 2px solid map-get($brand-color,sub1);
+  border-radius: 4px;
+  margin: 0px 10px 10px 10px;
+}
+
 .formBox{
   margin-top: 10px;
   .fields{
@@ -145,7 +152,8 @@ h1 {
 #todo-form{
   .task{
     outline-style: none;
-    // line-height: 60px;
+    background-image: url("/public/dist/img/github.svg");
+    // line-height: 60px
     border:none;
     width : 100%;
     background: none;
@@ -199,6 +207,14 @@ h1 {
 
   }
 }
+
+.todo-remove{
+  display: inline-block;
+  cursor: pointer;
+  right: 0;
+  position: absolute;
+}
+
 
 
 footer {

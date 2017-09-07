@@ -17539,7 +17539,7 @@ ol.ui.horizontal.list li:before,
   padding: 0.67857143em 1em;
   font-size: 1em;
   background: #FFFFFF;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 2px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   /* border-radius: 0.28571429rem; */
   box-shadow: 0em 0em 0em 0em transparent inset;
@@ -17817,7 +17817,7 @@ ol.ui.horizontal.list li:before,
 .ui.form input[type="file"]:focus,
 .ui.form input[type="url"]:focus {
   color: rgba(0, 0, 0, 0.95);
-  border-color: #85B7D9;
+  border-color: #474F58;
   /* border-radius: 0.28571429rem; */
   background: #FFFFFF;
   box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
@@ -28330,7 +28330,7 @@ a.ui.card:hover,
 
 .ui.checkbox {
   position: relative;
-  display: inline-block;
+  display: block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   outline: none;
@@ -28365,7 +28365,7 @@ a.ui.card:hover,
 .ui.checkbox label {
   cursor: auto;
   position: relative;
-  display: block;
+  display: inline-block;
   padding-left: 1.85714em;
   outline: none;
   font-size: 1em;
@@ -29586,9 +29586,9 @@ body.dimmable > .dimmer {
 }
 
 select.ui.dropdown {
-  height: 38px;
+  height: 40px;
   padding: 0.5em;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 2px solid rgba(34, 36, 38, 0.15);
   visibility: visible;
 }
 
