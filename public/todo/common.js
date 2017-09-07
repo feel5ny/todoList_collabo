@@ -12,7 +12,6 @@ function render({ target, templatePath, dataPath, queryFrom = document }) {
       const html = ejs.render(templateRes.data, {
         todos: dataRes.data
       })
-
       // 렌더링 결과를 문서에 주입하기
       const targetEl = queryFrom.querySelector(target)
       targetEl.innerHTML = html

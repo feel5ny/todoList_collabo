@@ -13,6 +13,34 @@ app.get('/api/todos', (req, res) => {
   res.send(data.todos)
 })
 
+//todayDate
+app.get('/api/time', (req, res) => {
+  function todayDate() {
+    const today = ['Sun','Mon','Tue','Wen','Thu','Fri','Sat'];
+    const date = new Date();
+
+    //오늘 날짜
+    return date.toLocaleDateString() + " " + today[date.getDay()]
+  }
+  let date = todayDate();
+  res.send(date);
+})
+
+//percent
+app.get('/api/percent', (req, res) => {
+  function percent() {
+    let num = 0;
+    data.todos.forEach(item => {
+      if(item.complete == true){
+        num++;
+      }
+    });
+    return Math.floor((num/data.todos.length)*100)+"%"
+  }
+  let percentResult = percent();
+  res.send(percentResult);
+});
+
 app.post('/api/todos', jsonMiddleware, (req, res) => {
   const {title} = req.body
   if (title) {
