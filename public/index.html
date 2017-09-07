@@ -7,6 +7,7 @@
   <title>Documents</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/semantic.css">
 </head>
 <body>
   <!-- wrapper(전체감싸기) 시작  -->
@@ -15,25 +16,35 @@
     <div class="headerLeft">
       <h1 class="title">To Do List</h1>
       <img src = "/dist/img/writing-hand.svg">
+      <div class="status">
+        <div class="uncomplete">
+          <p>uncomplete</p>
+          <p class="count">09</p>
+        </div>
+        <div class="complete">
+          <p>complete</p>
+          <p class="count">09</p>
+        </div>
+      </div>
       <p class="todayDate">today 2017.09.07.thu</p>
     </div>
     <!-- header 종료  -->
 
     <!-- 800px grid 시작  -->
       <div class="grid">
-        <div class="status">
-          <div class="uncomplete">
-            <p>uncomplete</p>
-            <p class="count">09</p>
+        <div class="progress">
+          <p>87%</p>
+          <div class="ui active progress">
+            <div class="bar">
+              <div class="progress"></div>
+            </div>
           </div>
-          <div class="complete">
-            <p>complete</p>
-            <p class="count">09</p>
-          </div>
+          <p class="percent"></p>
         </div>
         <div id="wrap">
           <form id="todo-form" autocomplete="off">
-            <input type="text" name="title">
+            <input type="text" name="title" placeholder="할일을 적으세요">
+            <input type="text" name="deadline" placeholder="마감기한을 적으세요">
             <input type="submit" value="전송">
           </form>
           <div id="todos">loading...</div>
@@ -54,5 +65,6 @@
   <script src="./todo/vendor/ejs.min.js"></script>
   <script src="./todo/common.js"></script>
   <script src="./todo/index.js"></script>
+  <script src="./dist/css/semantic.js"></script>
 </body>
 </html>

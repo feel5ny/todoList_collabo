@@ -1,7 +1,7 @@
 @import "variables";
 @font-face{
   font-family: 'Montserrat';
-  src : url('/font/Montserrat-SemiBold.ttf'),url('/font/Montserrat-Bold.ttf')
+  src : url('../font/Montserrat-SemiBold.ttf'),url('../font/Montserrat-Bold.ttf')
 }
 
 html, body {
@@ -22,12 +22,13 @@ h1 {
 
 .headerLeft {
   display: block;
-  position: absolute;
-  margin : 35px 0px 0px 35px;
-  width: 100%;
+  position: relative;
+  margin : 35px;
+  padding-right: 250px;
+  // width: 100%;
   .title {
     font: {
-      family :'Montserrat';
+      family :$family;
       size: 70px;
     }
     color : map-get($brand-color,main1);
@@ -60,9 +61,9 @@ h1 {
 }
 
 .status{
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 36px;
+  display: inline-block;
+  // justify-content: flex-end;
+  // margin-top: 36px;
   font: {
     family: $family;
     weight: 600;
@@ -72,6 +73,7 @@ h1 {
     margin: 0px;
   }
   .uncomplete{
+    text-transform: uppercase;
     margin-right: 10px;
     display: inline-block;
     position:relative;
@@ -86,6 +88,8 @@ h1 {
     }
   }
   .complete{
+    text-transform: uppercase;
+    text-decoration-line: line-through;
     margin-right: 10px;
     display: inline-block;
     float : right;
@@ -95,6 +99,20 @@ h1 {
     }
   }
 }
+
+.progress{
+  margin : 10px;
+  font:{
+    size: 56px;
+    family : $family;
+  }
+  .progress{
+    p{
+      margin-bottom:0px;
+    }
+  }
+}
+
 
 footer {
   img {
@@ -127,13 +145,13 @@ footer {
   text-align: right;
   margin: 0px 35px 35px 0px;
   position: relative;
-  bottom: 10px;
+  bottom: 0px;
 }
 
 #wrap {
   box-sizing: border-box;
   border-radius: 5px;
-  margin:0px;
+  margin-top :30px;
   // width: 400px;
   background-color: #f5f5f5;
 }
