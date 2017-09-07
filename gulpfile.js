@@ -13,7 +13,7 @@ var dist = 'public/dist';
 
 var paths = {
   js: src + '/**/*.js',
-  scss: src + '/**/*.scss',
+  scss: src + '/scss/*.scss',
   html: src + '/**/*.html',
 };
 
@@ -28,8 +28,8 @@ var paths = {
 // sass 파일을 css 로 컴파일한다.
 gulp.task('compile-sass', function () {
   return gulp.src(paths.scss)
-    .pipe(sass({outputStyle: 'extended'}).on('error', sass.logError))
-    .pipe(gulp.dest(dist + '/css'));
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(gulp.dest(dist+'/css'));
 });
 
 // HTML 파일을 압축한다.
