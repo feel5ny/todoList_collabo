@@ -5,13 +5,18 @@ function render({ target, templatePath, dataPath, queryFrom = document }) {
   // 데이터 가져오기
   const dataPromise = axios.get(dataPath)
 
+  const progress = document.querySelector(".ui.progress .bar");
+  const progressPromise = axios.get('/api/percent');
+
   // 둘다 완료되면...
-  return Promise.all([templatePromise, dataPromise])
-    .then(([templateRes, dataRes]) => {
+  return Promise.all([templatePromise, dataPromise, progressPromise])
+    .then(([templateRes, dataRes, progressRes]) => {
       // 템플릿 렌더링하기
       const html = ejs.render(templateRes.data, {
         todos: dataRes.data
       })
+      // console.log('prog:', res.data);
+      progress.style.width = progressRes.data;
       // 렌더링 결과를 문서에 주입하기
       const targetEl = queryFrom.querySelector(target)
       targetEl.innerHTML = html
