@@ -32638,7 +32638,7 @@ a.ui.nag {
   background: #888888;
   border-radius: 0.28571429rem;
   -webkit-transition: width 0.1s ease, background-color 0.1s ease;
-  transition: width 0.1s ease, background-color 0.1s ease;
+  transition: width 1s ease, background-color 0.1s ease;
 }
 
 /* Percent Complete */
