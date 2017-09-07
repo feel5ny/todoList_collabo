@@ -1,14 +1,145 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../font/Montserrat-SemiBold.ttf"), url("../font/Montserrat-Bold.ttf");
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
+h1 {
+  margin: 0px;
+}
+
+.wrapper {
+  height: 100%;
+  border: 10px solid #474F58;
+  position: relative;
+}
+
+.headerLeft {
+  display: block;
+  position: relative;
+  margin: 35px;
+  padding-right: 250px;
+}
+
+.headerLeft .title {
+  font-family: "Montserrat";
+  font-size: 70px;
+  color: #474F58;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.headerLeft img {
+  display: inline-block;
+}
+
+.headerLeft .todayDate {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #9B9B9B;
+  margin: 0px;
+}
+
+.grid {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.status {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #474F58;
+}
+
+.status p {
+  margin: 0px;
+}
+
+.status .uncomplete {
+  text-transform: uppercase;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  float: right;
+}
+
+.status .uncomplete p {
+  text-align: right;
+}
+
+.status .count {
+  font-size: 50px;
+}
+
+.status .complete {
+  text-transform: uppercase;
+  text-decoration-line: line-through;
+  margin-right: 10px;
+  display: inline-block;
+  float: right;
+  color: #9B9B9B;
+}
+
+.status .complete p {
+  text-align: right;
+}
+
+.progress {
+  margin: 10px;
+  font-size: 56px;
+  font-family: "Montserrat";
+}
+
+.progress .progress p {
+  margin-bottom: 0px;
+}
+
+footer {
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  color: #474F58;
+  text-align: right;
+  margin: 0px 35px 35px 0px;
+  position: relative;
+  bottom: 0px;
+}
+
+footer img {
+  position: absolute;
+  right: 80px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #474F58;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: black;
+}
+
+footer p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  margin: 10px 0px 0px 0px;
+}
+
 #wrap {
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 20px;
-  margin: 20px auto;
-  width: 400px;
+  margin-top: 30px;
   background-color: #f5f5f5;
 }
 
