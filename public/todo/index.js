@@ -30,7 +30,8 @@
           axios.patch(`/api/todos/${id}`, {
             complete: e.currentTarget.checked
           }).then(res => {
-            loadTodos()
+            loadTodos();
+            changeProg();
           })
         })
 
@@ -39,7 +40,8 @@
         const removeLink = todoItem.querySelector('.todo-remove')
         removeLink.addEventListener('click', e => {
           axios.delete(`/api/todos/${id}`).then(res => {
-            loadTodos()
+            loadTodos();
+            changeProg();
           })
         })
       })
@@ -50,14 +52,15 @@
     e.preventDefault()
     const form = e.currentTarget
     axios.post('/api/todos', {
-      title: form.elements.title.value
+      title: form.elements.task.value
     })
       .then(loadTodos)
       .then(() => {
-        form.elements.title.value = null
+        form.elements.task.value = null
       })
   })
 
-  loadTodos()
+  loadTodos();
+
 
 })(window, document)
